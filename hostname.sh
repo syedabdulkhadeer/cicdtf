@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Declaring the servers here
-servers= ("192.168.1.11", "192,168.2.39", 192.168.2.22", "192.168.1.120") 
+servers= ("192.168.1.11" "192,168.2.39" 192.168.2.22" "192.168.1.120") 
 
 #Declaring the username
 username= "ec2-user"
