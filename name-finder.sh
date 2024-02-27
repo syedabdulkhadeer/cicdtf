@@ -1,4 +1,4 @@
 #!/bin/bash
 #
-identifier_file= `cat users | grep Kha.eer`
+identifier_file= `cat users.txt | grep Kha.eer`
 echo "output:$identifier_file"
