@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-identifier_file=`cat users.txt | grep Kha.eer`
+identifier_file=`cat users1.txt | grep Kha.eer`
 
 echo "output:"
 
