@@ -15,6 +15,9 @@ aws s3 ls
 # Listing ec2 instances 
 echo "Print list of ec2-instances:"
 aws ec2 describe-instances
+# (or)
+# We can filter the output with the help of json jq/ yaml yq pares :
+# aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
 
 # Listing lambda
 echo "Print list of Lambda funcitons :"
