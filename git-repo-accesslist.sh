@@ -1,5 +1,17 @@
 #!/bin/bash
 
+###########################
+# Author	: Abdul Khadeer
+# Date		: 02-03-2024
+# Purpose	: To list the users of github repo with read access
+# Version	: Version v2
+# #########################
+
+#set -exo	# (error, debugging, pipeline failure)
+
+# Calling the helper function to execute on top of all
+helper{}
+
 # Providing GitHub URL
 GitHub_API_URL="https://api.github.com"
 
@@ -7,7 +19,7 @@ GitHub_API_URL="https://api.github.com"
 USERNAME=$username
 TOKEN=$token
 
-# User and Repository information at the time of exec
+# User and Repository information at the time of exec, cli args
 REPO_OWNER=$1
 REPO_NAME=$2
 
@@ -34,6 +46,16 @@ function list_users_with_read_access {
 		echo "The Users with read access to : ${REPO_OWNER}/${REPO_NAME}:"
 		echo "$Collaborators"
 	fi
+}
+
+# Adding the helper funtion to guide through the executor
+function helper {
+expected_cmd_args=2
+if [ $# -ne $expecte_cmd_args ]; then
+        echo "Must enter the required inputs at the time execution!"
+else
+        echo "asd"
+fi
 }
 
 # Main script
