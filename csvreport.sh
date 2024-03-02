@@ -8,6 +8,8 @@
 # Description	: To listout the resources and preparing the report
 # Version	: version v1
 ###################################################################
+# set -exo (error, debugging, pipefailure)
+#
 # Checking the s3 resources/buckts
 echo "Print list of s3:"
 aws s3 ls
@@ -16,9 +18,9 @@ aws s3 ls
 echo "Print list of ec2-instances:"
 aws ec2 describe-instances
 # (or)
-# We can filter the output with the help of json jq/ yaml yq pares :
+# We can filter the output with the help of json jq/ yaml yq parser
 # aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
-
+i
 # Listing lambda
 echo "Print list of Lambda funcitons :"
 aws lambda list-functions

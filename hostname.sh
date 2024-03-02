@@ -11,7 +11,7 @@ for server in "${servers[@]}"; do
 	echo "Connecting to the $server..."
 
 #Doing SSH to each server and running hostname command
-hostname= $(ssh "$username@$server" hostname)
+hostname=$(ssh "$username@$server" hostname)
 
 #Checking if the SSH is done or not 
 if [$? -eq 0]; then
